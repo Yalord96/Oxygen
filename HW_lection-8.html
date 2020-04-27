@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work lection 8</title>
+</head>
+<body>
+    <table border="1" cols="3" width="100%">
+        <tr height="200px">
+            <td>
+                <form>
+                    <select required>
+                        <option value="s1">Вариант №1</option>
+                        <option value="s2">Вариант №2</option>
+                        <option value="s3">Вариант №3</option>
+                        <option value="s4">Вариант №4</option>
+                    </select>
+                    <input type="Submit">
+                </form>
+            </td>
+            <td>
+                <form>
+                    <select name="select" multiple>
+                        <option selected value="s1">Вариант №1</option>
+                        <option value="s2">Вариант №2</option>
+                        <option value="s3">Вариант №3</option>
+                        <option value="s4">Вариант №4</option>
+                    </select>
+                    <input type="Submit">
+                </form>
+            </td>
+            <td>
+                <form>
+                    <p><strong>Укажите цифру:</strong></p>
+                    <input type="number" required>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <select multiple size="1">
+                        <option value="s1" selected>Вариант №1</option>
+                        <option value="s2" >Вариант №2</option>
+                        <option value="s3" >Вариант №3</option>
+                        <option value="s4" >Вариант №4</option>
+                        <option value="s5" >Вариант №5</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr height="200px">
+            <td>
+                <form>
+                <p>Размер рисунка: <input type="range" min="1" max="5" step="1" value="3" id="size" oninput="sizePic()"></p>
+                <p><img src="img/t-rex.jpg" alt="" id="pic" width="150"></p>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <button type="reset">Очистить</button>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <input type="search" placeholder="Поиск по сайту"required>
+                    <button type="submit">Поиск</button>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <p><b>Укажите цвет фона</b><input type="color" required>
+                    <button type="submit">Выбрать</button></p>
+                </form>
+            </td>
+        </tr>
+        <tr hight="200px">
+            <td>
+                <form>
+                    <p><b>Укажите</b></p>
+                    <p><input type="radio" name="radio" value="radio1" required><b>Радио 1</b></p>
+                    <p><input type="radio" name="radio" value="radio2" required><b>Радио 2</b></p>
+                    <p><input type="radio" name="radio" value="radio3" required><b>Радио 3</b></p>
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+            <td>
+                <form>
+                    <p> <b>Введите текст: </b><br>
+                    <textarea name="comment" cols="30" rows="3" wrap="hard"></textarea></p>
+                    <p><input type="submit" value="Submit">
+                </form>
+            </td>
+            <td>
+                <form>
+                    <p><b>Укажите дату</b></p>
+                    <p><input type="checkbox" name="data" value="2010" ><b>2010</b></p>
+                    <p><input type="checkbox" name="data" value="2014" ><b>2014</b></p>
+                    <p><input type="checkbox" name="data" value="2017" ><b>2017</b></p>
+                    <p><input type="checkbox" name="data" value="2019" ><b>2019</b></p>
+                    <input type="submit" value="Submit" >
+                </form>
+            </td>
+            <td>
+                <form>
+                    <p><b>Загрузите фотографии</b></p>
+                    <input type="file" name="img" multiple accept="image/jpeg,image/png,image/gif">
+                    <input type="submit" value="Отправить">
+                </form>
+            </td>
+        </tr>
+    </table>
+    <table border="1" width="100%">
+        <tr>
+            <td align="center">
+                <video controls loop style="height: 500px">
+                    <source src="video/metallica-nothing-else-matters_163361.mp4">
+                </video>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <audio controls loop>
+                    <source src="audio/metallica-metallica-nothing-else-matters(mp3-top.info).mp3">
+                </audio>
+            </td>
+        </tr>
+    </table>
+    <script> 
+    function sizePic() {
+        size = document.getElementById("size").value;
+        img = document.getElementById("pic");
+        img.width = 60 + 20*size;
+        }
+    </script>
+</body>
+</html>
